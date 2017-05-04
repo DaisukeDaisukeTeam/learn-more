@@ -1,0 +1,17 @@
+name: TapID
+main: TapID\TapID
+version: 1.0
+api: [1.10.0]
+load: POSTWORLD
+author: tabasco12
+tid:
+  description: "このコマンドを打った後に、ブロックタップで確認できます"
+  usage: " /tid"
+permissions:
+ tid:
+  default: op
+  description: "Allows using all the ip things"
+  children:
+   tid.command:
+    default: op
+    description: "このコマンドを打った後に、ブロックタップで確認できます"

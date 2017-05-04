@@ -1,0 +1,13 @@
+name: JoinQuitPopup
+main: JoinQuitPopup\main
+version: 2.4
+api: 1.13.1
+commands:
+  jmset:
+    description: ログインのメッセージを変更します
+    usage: /jmset <message>
+    permission: op
+  qmset:
+    description: ログアウトのメッセージを変更します
+    usage: /qmset <message>
+    permission: op

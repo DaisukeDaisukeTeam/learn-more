@@ -1,0 +1,9 @@
+name: MentenanceINFO
+main: MentenanceINFO\MentenanceINFO
+version: 1.0.0
+api: [1.14.0]
+load: POSTWORLD
+author: ikatyo
+commands:
+ startinfo:
+  description: サーバーメンテナンス開始通知を送信します。

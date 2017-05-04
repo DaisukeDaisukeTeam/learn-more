@@ -1,0 +1,132 @@
+---
+name: HereAuth
+author: PEMapModder
+authors: []
+main: HereAuth\HereAuth
+api:
+- 2.0.0
+depend: []
+softdepend: []
+loadbefore: []
+description: ""
+website: ""
+prefix: HereAuth
+load: POSTWORLD
+version: 1.0-Dev#221
+commands: []
+permissions:
+  hereauth:
+    description: Root permission node for HereAuth permissions
+    default: op
+    children:
+      hereauth.auth:
+        description: Allows usage all of the /auth command (for self)
+        default: "true"
+        children:
+          hereauth.auth.autoauth:
+            description: Allows changing options related to AutoAuth
+            default: "true"
+            children:
+              hereauth.auth.autoauth.clientsecret:
+                description: Allows toggling client secret AutoAuth
+                default: "true"
+                children: []
+              hereauth.auth.autoauth.ip:
+                description: Allows toggling IP AutoAuth
+                default: "true"
+                children: []
+              hereauth.auth.autoauth.uuid:
+                description: Allows toggling UUID AutoAuth
+                default: "true"
+                children: []
+          hereauth.auth.masking:
+            description: Allows changing all masking options
+            default: "true"
+            children:
+              hereauth.auth.masking.location:
+                description: Allows changing all location masking options
+                default: "true"
+                children:
+                  hereauth.auth.masking.location.toggle:
+                    description: Allows toggling location masking
+                    default: "true"
+                    children: []
+                  hereauth.auth.masking.location.target:
+                    description: Allows changing location masking target
+                    default: "true"
+                    children: []
+              hereauth.auth.masking.inventory:
+                description: Allows toggling inventory masking
+                default: "true"
+                children: []
+          hereauth.auth.multiauth:
+            description: Allows toggling all multi-factor auth options
+            default: "true"
+            children:
+              hereauth.auth.multiauth.skin:
+                description: Allows toggling skin MFA options
+                default: "true"
+                children: []
+              hereauth.auth.multiauth.ip:
+                description: Allows toggling IP MFA options
+                default: "true"
+                children: []
+              hereauth.auth.multiauth.timeout:
+                description: Allows changing MFA timeout to anything
+                default: "true"
+                children:
+                  hereauth.auth.multiauth.timeout.small:
+                    description: Allows changing MFA timeout to a small number (defined
+                      in config.yml)
+                    default: "true"
+                    children: []
+                  hereauth.auth.multiauth.timeout.medium:
+                    description: Allows changing MFA timeout to a medium number (defined
+                      in config.yml)
+                    default: "true"
+                    children: []
+                  hereauth.auth.multiauth.timeout.big:
+                    description: Allows changing MFA timeout to infinity or a big
+                      number (defined in config.yml)
+                    default: "true"
+                    children: []
+      hereauth.rename:
+        description: Allows renaming another player's account with /rename
+        default: op
+        children: []
+      hereauth.register:
+        description: Allows using the /register command if not registered
+        default: "true"
+        children: []
+      hereauth.unregister:
+        description: Allows using the /unregister command to unregister another player's
+          account
+        default: op
+        children: []
+      hereauth.lock:
+        description: Allows using the /lock command
+        default: "true"
+        children: []
+      hereauth.changepw:
+        description: Allows using the /chpw command to change password
+        default: "true"
+        children: []
+      hereauth.import:
+        description: Allows using the /import command to import (and override) data
+          from any external incompatible database
+        default: op
+        children:
+          hereauth.import.command:
+            description: Allows using the /import command
+            default: ""
+            children: []
+          hereauth.import.merge:
+            description: Allows importing data without overriding current data
+            default: op
+            children: []
+          hereauth.import.overwrite:
+            description: Allows importing data with current ata being overriden
+            default: op
+            children: []
+generated: "2016-04-03T13:41:22+0000"
+...

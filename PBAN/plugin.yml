@@ -1,0 +1,42 @@
+name: PBAN
+main: Picasso\PBAN
+version: 2
+api: [1.13.0]
+load: POSTWORLD
+author: Picasso
+authors: [Picasso]
+description: BANシステムです
+commands:
+permissions:
+ pban:
+  default: op
+  children:
+   pban.command:
+    default: op
+ pbanlist:
+  default: op
+  children:
+   pbanlist.command:
+    default: op
+ unpban:
+  default: op
+  children:
+   unpban.command:
+    default: op
+commands:
+ pban:
+  description: "指定プレイヤーをPBANします"
+  permission: pban.command
+ pbanlist:
+  description: "PBANリスト、PBANされてるプレイヤーの詳細を表示します"
+  permission: pbanlist.command
+ unpban:
+  description: "指定プレイヤーのPBANを解除します"
+  permission: unpban.command
+permissions:
+ pban.command:
+  default: op
+ pbanlist.command:
+  default: op
+ unpban.command:
+  default: op

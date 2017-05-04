@@ -1,0 +1,21 @@
+name: ViewerName
+main: ViewerName\main
+version: 4.3
+api: 1.13.0
+commands:
+  display:
+    description: コメントの名前を変更します
+    usage: /display <player> <name>
+    permission: op
+  tag:
+    description: タグの名前を変更します
+    usage: /tag <player> <name>
+    permission: op
+  rd:
+    description: コメントの名前をリセットします
+    usage: /rd <name>
+    permission: op
+  rt:
+    description: タグの名前をリセットします
+    usage: /rt <name>
+    permission: op

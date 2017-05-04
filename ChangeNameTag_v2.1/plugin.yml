@@ -1,0 +1,13 @@
+name: ChangeNameTag
+main: yuu528\ChangeNameTag
+author: yuu528
+version: 2.1
+api: [1.13.0]
+load: STARTUP
+commands:
+ nametag:
+  usage: /nametag [Player] <Name>
+  permission: changenametag.cmd
+permissions:
+ changenametag.cmd:
+  default: true

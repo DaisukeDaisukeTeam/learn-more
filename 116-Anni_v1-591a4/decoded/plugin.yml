@@ -1,0 +1,17 @@
+﻿name: Anni
+main: AnniPlugins\main
+author: 
+version: 1
+api: [3.0.0]
+load: 
+description: 
+commands:
+  admino:
+    description:
+    permission: 
+  adminod:
+    description:
+    permission: 
+  gamedao:
+    description:
+    permission: 

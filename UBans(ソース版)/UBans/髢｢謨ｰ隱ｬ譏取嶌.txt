@@ -1,0 +1,119 @@
+UBansの関数一覧表のメモです。プラグイン制作なんてしねえよって方はスルーしてくださいね！！
+
+※ onEnable()の中に 
+※ “ $this->UBans = Server::getInstance()->getPluginManager()->getPlugin(“UBans”); “
+※ を入れておいてください。
+
+
+————————————————————————————————————————————————————————————
+
+プレイヤーをUBanする関数
+
+addUBan($name, $reason, $sender_name)
+
+※プレイヤーの名前がDBの登録されていなかった時はfalseを、UBanに成功した場合はtrueを返します
+
+$name = プレイヤーの名前
+$reason = 理由
+$sender_name = コマンド実行者の名前
+
+例 : $this->UBans->addUBan(“Ramen_is_Goooooooood!!”, “I don't know”, “TukemenHa”);
+
+————————————————————————————————————————————————————————————
+
+プレイヤーのUBanを解除する関数
+
+unUBan($name)
+
+※プレイヤーの名前がDBの登録されていなかった時はfalseを、UBanに成功した場合はtrueを返します
+
+$name = プレイヤーの名前
+
+例 : $this->UBans->unUBan(“Ramen_is_Goooooooood!!”);
+
+————————————————————————————————————————————————————————————
+
+プレイヤーがUBanされているか確認する関数
+
+
+isUBan($name, $ip, $host, $cid, $uuid, $rawid)
+
+※UBanされていた場合はtrueを、されていない場合はfalseを返します
+
+$name = プレイヤーの名前
+$ip = IPアドレス
+$host = ホスト
+$cid = クライアントID
+$uuid = ユニークID
+$rawid = ローI
+
+例 : $this->UBans->isUBan($name, $ip, $host, $cid, $uuid, $rawid);
+
+————————————————————————————————————————————————————————————
+
+プレイヤーをWarnする関数
+
+addWarn($name, $reason, $sender_name)
+
+※プレイヤーの名前がDBの登録されていなかった時はfalseを、Warnに成功した場合はtrueを返します
+
+$name = プレイヤーの名前
+$reason = 理由
+$sender_name = コマンド実行者の名前
+
+例 : $this->UBans->addWarn(“Ramen_is_Goooooooood!!”, “I don't know”, “TukemenHa”);
+
+————————————————————————————————————————————————————————————
+
+プレイヤーのWarnを解除する関数
+unWarn($name)
+
+$name = プレイヤーの名前
+
+例 : $this->UBans->unWarn(“Ramen_is_Goooooooood!!”);
+
+————————————————————————————————————————————————————————————
+
+プレイヤーがWarnされているか確認する関数
+
+isWarn($name)
+
+※Warnされていた場合はtrueを、されていない場合はfalseを返します
+
+$name = プレイヤーの名前
+
+例 : $this->UBans->isWarn($name);
+
+————————————————————————————————————————————————————————————
+
+プレイヤーのネームタグ/ディスプレイタグに⚠️マークを付ける関数
+
+setDanger($player)
+
+$player = プレイヤーオブジェクト
+
+例 : $this->UBans->setDanger(Server::getInstance()->getPlayer(“Ramen_is_Goooooooood!!”));
+
+————————————————————————————————————————————————————————————
+
+プレイヤーをテキストでUBanする関数
+
+addUBanByText($name, $ip, $host, $cid, $uuid, $rawid, $reason, $sender_name)
+
+$name = 名前
+$ip = IPアドレス
+$cid = クライアントID
+$uuid = ユニークID
+$reason = 理由
+$rawid = ローID
+$sender_name = コマンド実行者
+例 : $this->UBans->addUBanByText(“Ramen_is_Goooooooood!!”, “Null”, “Null”, “Null”, “Null”, “Null”, “つけめん”, “TukemenHa”);
+————————————————————————————————————————————————————————————
+いかがでしたでしょうか？今後も関数を追加する予定があるので、期待はしてもいいかも知れません！
+
+
+
+
+
+
+

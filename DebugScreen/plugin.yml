@@ -1,0 +1,28 @@
+name: DebugScreen
+main: dev\Main
+version: "1.0"
+api:
+  - 2.0.0
+  - 3.0.0
+  - 4.0.0
+author: fuyutsuki
+website: https://twitter.com/y_fyi
+
+commands:
+ devs:
+  description: デバッグスクリーンを表示します。
+  usage: "/devs"
+  permission: dev.command.devs
+
+permissions:
+ dev.*:
+  default: op
+  description: "permission that allows player to use counter"
+  children:
+   dev.command.*:
+    default: op
+    description: "permission that allows player to use counter"
+    children:
+      dev.command.devs:
+        default: true
+        description: "permission that allows player to use counter"

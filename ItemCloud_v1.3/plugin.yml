@@ -1,0 +1,34 @@
+name: ItemCloud
+version: "1.3_forJpn"
+author: onebone
+api: [1.4.0]
+main: onebone\itemcloud\MainClass
+website: http://onebone.me/plugins/?plugin=itemcloud
+
+commands:
+ ic:
+  usage: /ic <register | upload | download | list | count> [アイテムID]
+  permission: itemcloud.command.register;itemcloud.command.upload;itemcloud.command.download;itemcloud.command.list;itemcloud.command.count
+permissions:
+ itemcloud.*:
+  description: Allows player to use all permissions
+  children:
+   itemcloud.command.*:
+    default: true
+    description: Allows player to use all ItemCloud commands
+    children:
+     itemcloud.command.register:
+      default: op
+      description: Allows player to use command /ic register
+     itemcloud.command.upload:
+      default: true
+      description: Allows player to use command /ic upload
+     itemcloud.command.download:
+      default: true
+      description: Allows player to use command /ic download
+     itemcloud.command.list:
+      default: true
+      description: Allows player to use command /ic list
+     itemcloud.command.count:
+      default: true
+      description: Allows player to use command /ic count
